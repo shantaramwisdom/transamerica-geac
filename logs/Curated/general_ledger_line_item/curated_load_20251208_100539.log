@@ -1,0 +1,172 @@
+Log File is /application/financedw/curated/logs/geac/general_ledger_line_item/curated_load_20251208_100539.log
+Error File is /application/financedw/curated/logs/geac/general_ledger_line_item/curated_load_20251208_100539.err
+Data Insert Script for source_system_name geac and domain name general_ledger_line_item started at: 2025-12-08 10:05:39
+Environment: mdl
+Project: financedw
+Domain/Segment Name: general_ledger_line_item
+Source System: geac
+Control M Job Name: MAFMHA701D
+Frequency: DAILY
+Vantage Systems Initial Load: N
+Rerun Flag: N
+Read SQL Files from S3: N
+Source Flag (I=IDL/D=Datastage/G=GDQ/A=ARR): I
+Current Directory Path - /application/financedw/curated/scripts
+Parent Directory Path - /application/financedw/curated
+2025-12-08 05:05:44 INFO: Start: 2025-12-08 05:05:44
+2025-12-08 05:05:44 INFO: Project is: financedw
+2025-12-08 05:05:44 INFO: Source Database (Glue) is: ta_individual_datalake_mdl_geac_curated
+2025-12-08 05:05:44 INFO: Target Database is: ta_individual_findw_mdl_financecurated
+2025-12-08 05:05:44 INFO: IDL Reference Databases if applicable for the Source System: ta_individual_datalake_mdl_ref_db, ta_individual_datalake_mdl_oracleedmcs_curated
+2025-12-08 05:05:54 INFO: S3 SQL Code Location is: s3://ta-individual-findw-mdl-codedeployment/financedw/scripts/curated/Query/erpdw/geac/general_ledger_line_item/
+2025-12-08 05:05:54 INFO: Spark Checkpoint directory is: s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/checkpoint/c55c637c-5cdb-44d3-860d-6269e4db35f5
+2025-12-08 05:05:55 INFO: Spark Application Name: Curated Load geac general_ledger_line_item
+2025-12-08 05:05:57 INFO: Spark Application Id: application_1765187564734_0005
+2025-12-08 05:05:57 INFO: Only App Running with App Name 'Curated Load geac general_ledger_line_item' is application_1765187564734_0005
+2025-12-08 05:06:01 INFO: S3 SQL Code Location For OC is: s3://ta-individual-findw-mdl-codedeployment/financedw/scripts/curated/Query/erpdw/geac/general_ledger_line_item/Controls/
+2025-12-08 05:06:01 INFO: S3 SQL Code Location For KC2 is: s3://ta-individual-findw-mdl-codedeployment/financedw/scripts/curated/Query/erpdw/geac/general_ledger_line_item/Controls/KC2/
+2025-12-08 05:06:01 INFO: This Domain is part of 'erpdw' and its Load Pattern is 'append'
+2025-12-08 05:06:01 INFO: Do Delete Logic Flag: N
+2025-12-08 05:06:01 INFO: Do OC2 Controls Flag: Y
+2025-12-08 05:06:01 INFO: Do KC2 Controls Flag: Y
+2025-12-08 05:06:01 INFO: Do Monthend Special Handling for geac: N
+2025-12-08 05:06:01 INFO: Do Weekend Special Handling for geac: N
+2025-12-08 05:06:01 INFO: Do Intraday Multibatch Run Flag: N
+2025-12-08 05:06:01 INFO: Do CDC Flag: N
+2025-12-08 05:06:11 INFO: Number of Batches to be Processed: 1
+2025-12-08 05:06:11 INFO: Maximum Days After which Soft Errors will be Moved as Hard Errors: 14
+2025-12-08 05:06:11 INFO: geac is an Inbound Source for GL/ERP
+2025-12-08 05:06:11 INFO: Processing Batch 1 of total 1 batches
+2025-12-08 05:06:13 INFO: Phase to Check in Redshift for Completeness - curated controls
+2025-12-08 05:06:13 INFO: Current Phase is: curated
+2025-12-08 05:06:13 INFO: Current BatchId for general_ledger_line_item: 651149
+2025-12-08 05:06:14 INFO: Current Cycle Date for general_ledger_line_item: 2025-12-05
+2025-12-08 05:06:14 INFO: In Progress Record deleted from findw batchtracking for geac, table general_ledger_line_item and phase curated at 2025-12-08 05:06:14.220390-05:00
+2025-12-08 05:06:14 INFO: Record inserted into findw batchtracking for geac, table general_ledger_line_item and phase curated at 2025-12-08 05:06:14.607189-05:00
+2025-12-08 05:06:15 INFO: Processing Cycle Date 2025-12-05 is not for a Monthend Run
+2025-12-08 05:06:15 INFO: Processing Cycle Date 2025-12-05 is not for a Weekend Run for geac
+2025-12-08 05:06:15 INFO: Seven Years ago from Cycle Date aka Cut Off Date (Jan 1st Date) is: 2018-01-01
+2025-12-08 05:06:15 INFO: Two Years ago from Cycle Date (Jan 1st Date) is: 2023-01-01
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:25 INFO: Table ta_individual_findw_mdl_financecurated.curated_error Location: s3://ta-individual-findw-mdl-finance-curated/financedw/orchestration/curated_error/
+2025-12-08 05:06:25 INFO: Backup Command: aws s3 sync --delete --only-show-errors s3://ta-individual-findw-mdl-finance-curated/financedw/orchestration/curated_error/table_name=geac_general_ledger_line_item/ s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/pipeline_bkup/curated_error/geac_general_ledger_line_item/full_backup/2025-12-05/651149/20251208040625/table_name=geac_general_ledger_line_item/
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:31 INFO: Reinstate Soft Errors from Cleared Errors - No action Taken
+2025-12-08 05:06:31 INFO: Reinstate Soft Errors from Cleared Errors for Rerun - Time Taken: 00:00:04(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:33 INFO: Total Hard Error Count 326
+2025-12-08 05:06:33 INFO: Total Hard Error in Rerun Batch 0
+2025-12-08 05:06:33 INFO: Total Hard Error Not in Rerun Batch 326
+2025-12-08 05:06:33 INFO: Reinstate Hard Errors - No action Taken
+2025-12-08 05:06:33 INFO: Reinstate Hard Errors for Rerun - Time Taken: 00:00:02(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:35 INFO: Total Soft Error Count 25897
+2025-12-08 05:06:35 INFO: Total Soft Error in Rerun Batch 0
+2025-12-08 05:06:35 INFO: Total Soft Error Not in Rerun Batch 25897
+2025-12-08 05:06:35 INFO: Reinstate Soft Errors - No action Taken
+2025-12-08 05:06:35 INFO: Reinstate Soft Errors for Rerun - Time Taken: 00:00:01(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:40 INFO: Intermediate DataFrame error_line_item - Extract Location - s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/tempdfs/error_line_item/geac/general_ledger_line_item/20251208040640/
+2025-12-08 05:06:44 INFO: Count of Reprocessable Soft Error Records in error_line_item is 25897 at 2025-12-08 05:06:44. Time Taken: 00:00:09(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:47 INFO: Intermediate DataFrame current_run_forced_header_errors - Extract Location - s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/tempdfs/current_run_forced_header_errors/geac/general_ledger_line_item/20251208040647/
+2025-12-08 05:06:48 INFO: Count of Unprocessable Forced Hard Error Records in current_run_forced_header_errors is 0 at 2025-12-08 05:06:48. Time Taken: 00:00:04(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:06:48 INFO: Time Taken for Setup Prerequisites for the Batch: 00:00:33(h:m:s)
+2025-12-08 05:06:50 INFO: Count of Records for lkp_actvty_gl_sbldgr_nm Dataframe is: 390. Time Taken: 00:00:01(h:m:s)
+2025-12-08 05:06:51 INFO: Count of Records for lkp_actvty_ldgr_nm Dataframe is: 1212. Time Taken: 00:00:01(h:m:s)
+2025-12-08 05:06:52 INFO: Count of Records for lkp_reinsurance_attributes Dataframe is: 2315. Time Taken: 00:00:01(h:m:s)
+2025-12-08 05:07:03 INFO: Count of Records for source_df Dataframe is: 498188. Time Taken: 00:00:15(h:m:s)
+2025-12-08 05:07:23 INFO: Count of Records for curated_error Dataframe is: 0. Time Taken: 00:00:01(h:m:s)
+2025-12-08 05:07:23 INFO: Spark writemode for curated_error: append
+2025-12-08 05:07:23 INFO: Total Records to be Appended: 0
+2025-12-08 05:07:23 INFO: Hard Error Count: 0
+2025-12-08 05:07:23 INFO: Successfully Reprocessed Error Count: 0
+2025-12-08 05:07:23 INFO: Count of Inserted Records (append) for ta_individual_findw_mdl_financecurated Database and curated_error Table is: 0 at 2025-12-08 05:07:23. Time Taken: 00:00:01(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:07:24 INFO: Count of Records for curated_error Dataframe is: 25897. Time Taken: 00:00:01(h:m:s)
+2025-12-08 05:07:24 INFO: Spark writemode for curated_error: overwrite
+2025-12-08 05:07:25 INFO: Total Soft Error Count: 25897
+2025-12-08 05:07:25 INFO: Soft Error Count in Current Batch: 0
+2025-12-08 05:07:33 INFO: Existing Soft Error Count Carried Over (from Older Batches): 25897
+2025-12-08 05:07:33 INFO: Count of Inserted Records (overwrite) for ta_individual_findw_mdl_financecurated Database and curated_error Table is: 25897 at 2025-12-08 05:07:33. Time Taken: 00:00:08(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:07:36 INFO: Count of Records for finaldf Dataframe is: 472291. Time Taken: 00:00:02(h:m:s)
+2025-12-08 05:07:36 INFO: Spark writemode for finaldf: overwrite
+2025-12-08 05:07:36 INFO: Final DF Count 472291 matches to Source DF Count 498188 - (Soft Error DF Count 25897 + Hard/Reprocessed Error DF Count 0)
+2025-12-08 05:07:36 INFO: Final DF Count 472291 matched to Valid Records DF Count 472291
+2025-12-08 05:07:36 INFO: Curated Table Name: geac_general_ledger_line_item
+2025-12-08 05:07:36 INFO: Skipping CDC Process as its not enabled
+2025-12-08 05:07:46 INFO: Total Errors Cleared with the Current Run 0
+2025-12-08 05:07:46 INFO: Count of Inserted Records for Curated Table geac_general_ledger_line_item is: 472291 at 2025-12-08 05:07:46. Time Taken: 00:00:10(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:07:46 INFO: Skipped Identifying Deletes Logic as the Source System/Domain Combination don't have Delete Logic Enabled
+2025-12-08 05:07:46 INFO: Record updated in findw batchtracking for geac, table general_ledger_line_item and phase curated at 2025-12-08 05:07:46.688736-05:00
+2025-12-08 05:07:46 INFO: Time Taken for Curated Data Load for the Batch: 00:01:35(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:08:04 INFO: Intermediate DataFrame error_curated_controls - Extract Location - s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/tempdfs/error_curated_controls/geac/general_ledger_line_item/20251208040804/
+2025-12-08 05:08:04 INFO: Count of Soft/Hard (For OC/KC2) Error Records in error_curated_controls is 0 at 2025-12-08 05:08:04. Time Taken: 00:00:03(h:m:s)
+2025-12-08 05:08:09 INFO: Intermediate DataFrame errors_cleared_controls - Extract Location - s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/tempdfs/errors_cleared_controls/geac/general_ledger_line_item/20251208040809/
+2025-12-08 05:08:09 INFO: Count of Soft/Hard (For OC/KC2) Error Records in errors_cleared_controls is 0 at 2025-12-08 05:08:09. Time Taken: 00:00:04(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:08:09 INFO: In Progress Record deleted from findw batchtracking for geac, table general_ledger_line_item and phase curated controls at 2025-12-08 05:08:09.734219-05:00
+2025-12-08 05:08:10 INFO: Record inserted into findw batchtracking for geac, table general_ledger_line_item and phase curated controls at 2025-12-08 05:08:10.124171-05:00
+2025-12-08 05:08:10 INFO: OC ControlLogging Deleted at: 2025-12-08 05:08:10. Time Taken: 00:00:00(h:m:s)
+2025-12-08 05:08:32 INFO: Writing to financedwcontrols.controllogging in findw. WriteMode is append
+2025-12-08 05:08:32 INFO: Writing to financedwcontrols.controllogging in findw completed
+2025-12-08 05:08:32 INFO: OC Controllogging Written at: 2025-12-08 05:08:32. Time Taken: 00:00:21(h:m:s). Records Written 10
+2025-12-08 05:08:35 INFO: ControlResults Deleted at: 2025-12-08 05:08:35. Time Taken: 00:00:03(h:m:s)
+2025-12-08 05:08:35 INFO: ControlResults Written at: 2025-12-08 05:08:35. Time Taken: 00:00:03(h:m:s)
+2025-12-08 05:08:36 INFO: ControlResults Mismatch Query Executed at: 2025-12-08 05:08:36
+2025-12-08 05:08:36 INFO: Source and Target counts/measures are matching for geac_general_ledger_line_item
+2025-12-08 05:08:36 INFO: Record updated in findw batchtracking for geac, table general_ledger_line_item and phase curated controls at 2025-12-08 05:08:36.670767-05:00
+2025-12-08 05:08:36 INFO: Time Taken for OC Load of the Batch: 00:00:27(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:08:36 INFO: In Progress Record deleted from findw batchtracking for geac, table general_ledger_line_item and phase curated kc2 controls at 2025-12-08 05:08:36.945022-05:00
+2025-12-08 05:08:37 INFO: Record inserted into findw batchtracking for geac, table general_ledger_line_item and phase curated kc2 controls at 2025-12-08 05:08:37.259216-05:00
+2025-12-08 05:08:56 INFO: Kc2 Controllogging Deleted
+2025-12-08 05:08:56 INFO: Kc2 ControlResults Deleted
+2025-12-08 05:08:56 INFO: Kc2 Control Logging Record Count - 14900
+2025-12-08 05:08:56 INFO: Kc2 Controllogging Inserted
+2025-12-08 05:08:56 INFO: Kc2 ControlResults Inserted
+2025-12-08 05:08:56 INFO: Source and Target KC2 Controls are matching for geac_general_ledger_line_item
+2025-12-08 05:09:02 INFO: Record updated in findw batchtracking for geac, table general_ledger_line_item and phase curated kc2 controls at 2025-12-08 05:09:02.438521-05:00
+2025-12-08 05:09:02 INFO: Time Taken for Key Controls Load of the Batch: 00:00:25(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:09:02 INFO: Time Taken for Loading the Entire Batch: 00:02:50(h:m:s)
+2025-12-08 05:09:03 INFO: Refreshing Materialized View dw_materialized_views.general_ledger_line_item_error
+2025-12-08 05:09:20 INFO: There are no Curated Errors in the Current Batch/Batches Processed
+2025-12-08 05:09:20 INFO: There are no Curated Errors that got Cleared in the Current Batch/Batches Processed
+2025-12-08 05:09:25 INFO: Move Aged Soft Errors As Hard Errors (Max allowed aging 14 days) - No action Taken
+2025-12-08 05:09:26 INFO: Stats from Error View erpdw.general_ledger_line_item_error for table geac_general_ledger_line_item is below. If this Query is Failing there can be Data
+Corruptions in Error Table while Reading From Redshift. Please Restore Error Table from Backup and Rerun.
+
++--------------------+--------------------------+------------------+----+-------------------------------+-------------------------------+------------------------+------------------------+
+|original_cycle_date |error_classification_name |source_system_name|cnt |min_recorded_timestamp         |max_recorded_timestamp         |min_original_cycle_date |max_original_cycle_date |
++--------------------+--------------------------+------------------+----+-------------------------------+-------------------------------+------------------------+------------------------+
+|2025-11-01          |Cleared                   |geac              |100 |2025-11-05 01:03:35.990514     |2025-11-05 01:03:35.990514     |2025-11-01             |2025-11-01             |
+|2025-02-25          |Hard/Aged Soft            |geac              |2   |2025-03-20 02:07:32.457429     |2025-03-20 02:07:32.457429     |2025-02-25             |2025-02-25             |
+|2025-03-14          |Hard/Aged Soft            |geac              |2   |2025-03-29 23:04:02.212351     |2025-03-29 23:04:02.212351     |2025-03-14             |2025-03-14             |
+|2025-11-21          |Hard                      |geac              |1   |2025-12-06 02:54:40.763352     |2025-12-06 02:54:40.763352     |2025-11-21             |2025-11-21             |
+|2025-04-25          |Hard                      |geac              |1   |2025-05-09 04:25:46.108641     |2025-05-09 04:25:46.108641     |2025-04-25             |2025-04-25             |
+|2024-11-27          |Hard                      |geac              |1   |2024-11-27 23:18:11.912        |2024-11-27 23:18:11.912        |2024-11-27             |2024-11-27             |
+|2024-12-30          |Hard                      |geac              |1   |2024-12-30 23:03:07.564        |2024-12-30 23:03:07.564        |2024-12-30             |2024-12-30             |
+|2024-12-26          |Hard                      |geac              |1   |2024-12-26 23:28:30.832        |2024-12-26 23:28:30.832        |2024-12-26             |2024-12-26             |
+|2024-11-19          |Hard                      |geac              |1   |2024-11-19 23:17:56.294        |2024-11-19 23:17:56.294        |2024-11-19             |2024-11-19             |
+|2025-01-18          |Hard/Aged Soft            |geac              |1   |2025-02-02 23:06:31.892        |2025-02-02 23:06:31.892        |2025-01-18             |2025-01-18             |
+|2024-12-26          |Hard                      |geac              |1   |2024-12-26 23:17:31.019        |2024-12-26 23:17:31.019        |2024-12-26             |2024-12-26             |
+|2025-02-10          |Hard                      |geac              |1   |2025-02-20 23:19:16.663478     |2025-02-20 23:19:16.663478     |2025-02-10             |2025-02-10             |
+|2025-01-18          |Hard/Aged Soft            |geac              |2   |2025-02-02 11:04:04.968        |2025-02-02 11:04:04.968        |2025-01-18             |2025-01-18             |
+|2024-12-20          |Hard                      |geac              |1   |2025-01-15 02:06:33.844467     |2025-01-15 02:06:33.844467     |2024-12-20             |2024-12-20             |
+|2024-11-25          |Hard                      |geac              |1   |2024-11-25 23:26:03.658        |2024-11-25 23:26:03.658        |2024-11-25             |2024-11-25             |
+|2025-01-18          |Hard/Aged Soft            |geac              |1   |2025-02-02 23:21:17.000        |2025-02-02 23:21:17.000        |2025-01-18             |2025-01-18             |
+|2025-01-06          |Hard                      |geac              |3   |2025-01-07 06:28:08.121        |2025-01-07 06:28:08.121        |2025-01-06             |2025-01-06             |
+|2025-04-23          |Hard                      |geac              |1   |2025-05-09 04:18:31.910509     |2025-05-09 04:18:31.910509     |2025-04-23             |2025-04-23             |
++--------------------+--------------------------+------------------+----+-------------------------------+-------------------------------+------------------------+------------------------+
+only showing top 20 rows
+
+2025-12-08 05:09:28 INFO: No more Batch Left to be Loaded
+2025-12-08 05:09:28 INFO: Script completed
+2025-12-08 05:09:28 INFO: End: 2025-12-08 05:09:28
+Curated Load Script for Source System: geac and Domain: general_ledger_line_item completed at: 2025-12-08 10:09:29

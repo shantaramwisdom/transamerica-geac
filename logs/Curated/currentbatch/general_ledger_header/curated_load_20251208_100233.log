@@ -1,0 +1,54 @@
+Log File is /application/financedw/curated/logs/geac/currentbatch/general_ledger_header/curated_load_20251208_095613.log
+Error File is /application/financedw/curated/logs/geac/currentbatch/general_ledger_header/curated_load_20251208_095613.err
+Data Insert Script for source_system_name geac and domain name currentbatch_general_ledger_header started at: 2025-12-08 09:56:13
+Environment: mdl
+Project: financedw
+Domain/Segment Name: currentbatch_general_ledger_header
+Source System: geac
+Control M Job Name: MAFMHA701D
+Frequency: DAILY
+Vantage Systems Initial Load: N
+Rerun Flag: N
+Read SQL Files from S3: N
+Source Flag (I=IDL/D=Datastage/G=GDQ/A=ARR): I
+Current Directory Path - /application/financedw/curated/scripts
+Parent Directory Path - /application/financedw/curated
+2025-12-08 04:56:18 INFO: Start: 2025-12-08 04:56:18
+2025-12-08 04:56:18 INFO: Project is: financedw
+2025-12-08 04:56:18 INFO: Source Database (Glue) is: ta_individual_datalake_mdl_geac_curated
+2025-12-08 04:56:18 INFO: Target Database is: ta_individual_findw_mdl_financecurated
+2025-12-08 04:56:18 INFO: IDL Reference Databases if applicable for the Source System: ta_individual_datalake_mdl_ref_db, ta_individual_datalake_mdl_oracleedmcs_curated
+2025-12-08 04:56:18 INFO: S3 SQL Code Location is: s3://ta-individual-findw-mdl-codedeployment/financedw/scripts/curated/Query/currentbatch/idl/
+2025-12-08 04:56:18 INFO: Spark Checkpoint directory is: s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/checkpoint/9c6442b6-8c66-46d0-a9d5-7eb055925bbd
+2025-12-08 04:56:19 INFO: Spark Application Name: Curated Load geac general_ledger_header currentbatch
+2025-12-08 04:56:19 INFO: Spark Application Id: application_1765187564734_0001
+2025-12-08 04:56:19 INFO: Only App Running with App Name 'Curated Load geac general_ledger_header currentbatch' is application_1765187564734_0001
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 04:56:40 INFO: This Domain is part of 'erpdw' and its Load Pattern is 'append'
+2025-12-08 04:56:40 INFO: Do Delete Logic Flag: N
+2025-12-08 04:56:40 INFO: Do OC Controls Flag: N
+2025-12-08 04:56:40 INFO: Do KC2 Controls Flag: N
+2025-12-08 04:56:40 INFO: Do Monthend Special Handling for geac: N
+2025-12-08 04:56:40 INFO: Do Weekend Special Handling for geac: N
+2025-12-08 04:56:40 INFO: Do Intraday Multibatch Run Flag: N
+2025-12-08 04:56:40 INFO: Do CDC Flag: N
+2025-12-08 04:56:40 INFO: Number of Batches to be Processed: 1
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 04:56:42 INFO: Processing Batch 1 of total 1 batches
+2025-12-08 04:56:44 INFO: Count of Records for idlbatches Dataframe is: 86. Time Taken: 00:00:01(h:m:s)
+2025-12-08 04:56:44 INFO: Count of Records for latestcompletedbatch Dataframe is: 1. Time Taken: 00:00:05(h:m:s)
+2025-12-08 04:56:46 INFO: Count of Records for finaldf Dataframe is: 1. Time Taken: 00:00:01(h:m:s)
+2025-12-08 04:56:50 INFO: Spark writemode for finaldf: overwrite
+2025-12-08 04:56:50 INFO: Curated Table Name: currentbatch
+2025-12-08 04:56:56 INFO: Count of Inserted Records for Curated Table currentbatch is: 1 at 2025-12-08 04:56:56. Time Taken: 00:00:05(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 04:57:02 INFO: Skipped Identifying Deletes Logic as the Source System/Domain Combination don't have Delete Logic Enabled
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 04:57:02 INFO: Current Phase is: curated
+2025-12-08 04:57:02 INFO: Current BatchId for currentbatch: 651149
+2025-12-08 04:57:02 INFO: Current Cycle Date for currentbatch: 2025-12-05
+2025-12-08 04:57:02 INFO: Time Taken for Curated Data Load for the Batch: 00:00:09(h:m:s)
+2025-12-08 04:57:02 INFO: No more Batch Left to be Loaded
+2025-12-08 04:57:02 INFO: Script completed
+2025-12-08 04:57:02 INFO: End: 2025-12-08 04:57:02
+Curated Load Script for Source System: geac and Domain: currentbatch_general_ledger_header completed at: 2025-12-08 09:57:03

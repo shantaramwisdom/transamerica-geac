@@ -1,0 +1,56 @@
+Log File is /application/financedw/curated/logs/geac/completedbatch/general_ledger_header/curated_load_20251208_100233.log
+Error File is /application/financedw/curated/logs/geac/completedbatch/general_ledger_header/curated_load_20251208_100233.err
+Data Insert Script for source_system_name geac and domain name completedbatch_general_ledger_header started at: 2025-12-08 10:02:33
+Environment: mdl
+Project: financedw
+Domain/Segment Name: completedbatch_general_ledger_header
+Source System: geac
+Control M Job Name: MAFMHA701D
+Frequency: DAILY
+Vantage Systems Initial Load: N
+Rerun Flag: N
+Read SQL Files from S3: N
+Source Flag (I=IDL/D=Datastage/G=GDQ/A=ARR): I
+Current Directory Path - /application/financedw/curated/scripts
+Parent Directory Path - /application/financedw/curated
+2025-12-08 05:02:38 INFO: Start: 2025-12-08 05:02:38
+2025-12-08 05:02:38 INFO: Project is: financedw
+2025-12-08 05:02:38 INFO: Source Database (Glue) is: ta_individual_datalake_mdl_geac_curated
+2025-12-08 05:02:38 INFO: Target Database is: ta_individual_findw_mdl_financecurated
+2025-12-08 05:02:38 INFO: IDL Reference Databases if applicable for the Source System: ta_individual_datalake_mdl_ref_db, ta_individual_datalake_mdl_oracleedmcs_curated
+2025-12-08 05:02:38 INFO: S3 SQL Code Location is: s3://ta-individual-findw-mdl-codedeployment/financedw/scripts/curated/Query/completedbatch/
+2025-12-08 05:02:38 INFO: Spark Checkpoint directory is: s3://ta-individual-findw-mdl-extracts/miscellaneous/financedw/curated/checkpoint/f990ff7d-51f9-4d03-b727-6f79050c21e2
+2025-12-08 05:02:39 INFO: Spark Application Name: Curated Load geac general_ledger_header completedbatch
+2025-12-08 05:02:39 INFO: Spark Application Id: application_1765187564734_0003
+2025-12-08 05:02:51 INFO: Only App Running with App Name 'Curated Load geac general_ledger_header completedbatch' is application_1765187564734_0003
+2025-12-08 05:02:51 INFO: This Domain is part of 'erpdw' and its Load Pattern is 'append'
+2025-12-08 05:02:51 INFO: Do Delete Logic Flag: N
+2025-12-08 05:02:51 INFO: Do OC Controls Flag: N
+2025-12-08 05:02:51 INFO: Do KC2 Controls Flag: N
+2025-12-08 05:02:51 INFO: Do Monthend Special Handling for geac: N
+2025-12-08 05:02:51 INFO: Do Weekend Special Handling for geac: N
+2025-12-08 05:02:51 INFO: Do Intraday Multibatch Run Flag: N
+2025-12-08 05:02:51 INFO: Do CDC Flag: N
+2025-12-08 05:02:51 INFO: Number of Batches to be Processed: 1
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:02:54 INFO: Processing Batch 1 of total 1 batches
+2025-12-08 05:03:00 INFO: Current Phase is: curated
+2025-12-08 05:03:00 INFO: Current BatchId for completedbatch: 651149
+2025-12-08 05:03:00 INFO: Current Cycle Date for completedbatch: 2025-12-05
+2025-12-08 05:03:00 INFO: In Progress Record deleted from findw batchtracking for geac, table general_ledger_header and phase curated completedbatch at 2025-12-08 05:03:00.653566-05:00
+2025-12-08 05:03:01 INFO: Record inserted into findw batchtracking for geac, table general_ledger_header and phase curated completedbatch at 2025-12-08 05:03:01.107613-05:00
+2025-12-08 05:03:01 INFO: Processing Cycle Date 2025-12-05 is not for a Monthend Run
+2025-12-08 05:03:01 INFO: Processing Cycle Date 2025-12-05 is not for a Weekend Run for geac
+2025-12-08 05:03:06 INFO: Count of Records for finaldf Dataframe is: 1. Time Taken: 00:00:04(h:m:s)
+2025-12-08 05:03:06 INFO: Spark writemode for finaldf: append
+2025-12-08 05:03:06 INFO: Curated Table Name: completedbatch
+2025-12-08 05:03:10 INFO: Count of Inserted Records for Curated Table completedbatch is: 1 at 2025-12-08 05:03:10. Time Taken: 00:00:03(h:m:s)
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:03:10 INFO: Skipped Identifying Deletes Logic as the Source System/Domain Combination don't have Delete Logic Enabled
+------------------------------------------------------------------------------------------------------------------------------------
+2025-12-08 05:03:10 INFO: Record updated in findw batchtracking for geac, table general_ledger_header and phase curated completedbatch at 2025-12-08 05:03:10.806040-05:00
+2025-12-08 05:03:10 INFO: Time Taken for Curated Data Load for the Batch: 00:00:16(h:m:s)
+2025-12-08 05:03:10 INFO: No more Batch Left to be Loaded
+2025-12-08 05:03:10 INFO: Script completed
+2025-12-08 05:03:10 INFO: End: 2025-12-08 05:03:10
+Curated Load Script for Source System: geac and Domain: completedbatch_general_ledger_header completed at: 2025-12-08 10:03:11
